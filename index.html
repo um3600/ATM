@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var pin = 3600;
+        var userPin = prompt("Enter your PIN:");
+
+        var balance = 10000.43;
+
+        if (userPin == pin) {
+            var choice = prompt("What do you want to do? withdraw, deposit, check balance ");
+
+            if (choice == "withdraw") {
+                var amount = +(prompt("Enter amount to withdraw:"));
+
+                balance = balance - amount;
+
+                console.log("Withdraw Successful");
+                console.log("Remaining Balance: " + balance);
+
+            } else if (choice == "deposit") {
+                var amount = Number(prompt("Enter amount to deposit:"));
+
+                balance = balance + amount;
+
+                console.log("Deposit Successful");
+                console.log("New Balance: " + balance);
+
+            } else if (choice == "check balance") {
+                console.log("Your Current Balance: " + balance);
+
+            } else {
+                console.log("Invalid Choice");
+            }
+
+        } else {
+            console.log("Wrong PIN");
+        }
+
+   
+    </script>
+</body>
+
+</html>
